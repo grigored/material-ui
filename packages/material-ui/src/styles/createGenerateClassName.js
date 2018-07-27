@@ -63,9 +63,7 @@ export default function createGenerateClassName(options = {}) {
           return `${prefix}-${rule.key}`;
         }
 
-        if (process.env.NODE_ENV !== 'production') {
-          return `${prefix}-${rule.key}-${ruleCounter}`;
-        }
+        return `${prefix}-${rule.key}-${ruleCounter}`;
       }
 
       if (process.env.NODE_ENV === 'production') {
